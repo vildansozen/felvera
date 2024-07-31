@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_adoption/widgets/CustomBottomNavigationBar.dart';
 
 // URL ve renk sabitlerini tanımlayalım
 class Urls {
@@ -50,7 +51,7 @@ class _AccountPageState extends State<AccountPage> {
           bwTiles(),
         ],
       ),
-      bottomNavigationBar: bottomNavigationBar(),
+      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 
@@ -120,40 +121,6 @@ class _AccountPageState extends State<AccountPage> {
       ),
       trailing: Icon(Icons.arrow_forward_ios, color: Colors.black, size: 20),
       onTap: () {},
-    );
-  }
-
-  Widget bottomNavigationBar() {
-    List<IconData> icons = [
-      Icons.home,
-      Icons.search,
-      Icons.add,
-      Icons.notifications,
-      Icons.person_outline,
-    ];
-
-    return BottomNavigationBar(
-      currentIndex: 2,
-      items: icons.map((icon) => item(icon)).toList(),
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      backgroundColor: Colors.white,
-      selectedItemColor: Colorz.accountPurple,
-      unselectedItemColor: Colors.grey,
-    );
-  }
-
-  BottomNavigationBarItem item(IconData icon) {
-    return BottomNavigationBarItem(
-      icon: icon == Icons.add ? addButton() : Icon(icon),
-      label: "",
-    );
-  }
-
-  Widget addButton() {
-    return CircleAvatar(
-      child: Icon(Icons.add, color: Colors.white),
-      backgroundColor: Colorz.accountPurple,
     );
   }
 }

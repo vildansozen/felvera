@@ -5,6 +5,7 @@ import 'package:pet_adoption/account.dart';
 import 'package:pet_adoption/models/pet_data.dart';
 import 'package:pet_adoption/settings.dart';
 import 'package:pet_adoption/aboutpage.dart';
+import 'package:pet_adoption/widgets/CustomBottomNavigationBar.dart';
 import '../widgets/pet_grid_list.dart'; // Ensure PetGridList is correctly imported
 
 class Home extends StatelessWidget {
@@ -13,6 +14,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: CustomBottomNavigationBar(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
