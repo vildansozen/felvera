@@ -35,7 +35,7 @@ class LoginPage extends StatelessWidget {
           "HOŞGELDİNİZ",
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
-        const Text("Hayvan dostlarımız yuva bulsun"),
+        const Text("Hayvan dostlarımız yuva bulsun."),
       ],
     );
   }
